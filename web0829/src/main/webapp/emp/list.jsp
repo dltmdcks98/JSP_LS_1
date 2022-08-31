@@ -1,5 +1,4 @@
 <%@page import="com.academy.web0829.domain.Dept"%>
-
 <%@page import="com.academy.web0829.domain.Emp"%>
 <%@page import="java.util.List"%>
 <%@page import="com.academy.web0829.emp.repository.EmpDAO"%>
