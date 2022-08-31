@@ -1,0 +1,5 @@
+package com.academy.web0829.mybatis;
+
+public class ConfigManager {
+
+}
