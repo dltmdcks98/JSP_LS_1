@@ -2,6 +2,7 @@ package com.academy.model2app.movie.controller;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,10 +29,16 @@ public class MovieController extends HttpServlet{
 		String msg = manager.getAdvice(movie);
 		
 		//4단계 결과 저장
-		HttpSession session = request.getSession();
-		session.setAttribute("data", msg);
+		/*
+
+		세션을 이용하면 브라우저를 닫지 않는 한 세션이 유지되어 데이터를 보관할 수 있지만,
+		세션 방법 이외에 방법이 있다면 안할 이유가 없다
+		현실의 114, 이메일포워딩 처럼 javaEE엣도 서버측의 특정 자원으로 현재 요청을 포워딩하는 기술을 지원며
+		사용되는  객체가RequestDispatcher 이다.
+		*/
+		request.setAttribute("data", msg);//request는 요청이 끊기면 사라지지만, 요청이 끊기지 않으면 살아있다.
+		RequestDispatcher dis = request.getRequestDispatcher("/movie/result.jsp");//포워딩 객체
+		dis.forward(request, response);//포워딩 실행 
 		
-		//5단계
-		response.sendRedirect("/movie/result.jsp");//클라이언트 브라우저로 하여금 지정한 url로 재접속 명령
 	}
 }
