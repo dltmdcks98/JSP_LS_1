@@ -7,7 +7,7 @@
 <script>
 function getResult(){
 	var form = document.querySelector("form");
-	form.action="/movie";
+	form.action="/movie.do";
 	form.method="post";
 	form.submit();
 }

@@ -2,21 +2,14 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>model2app</display-name>
 
-	<servlet>
-		<servlet-name>bloodServlet</servlet-name>
-		<servlet-class>com.academy.model2app.blood.controller.BloodController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-	<servlet-name>bloodServlet</servlet-name>
-	<url-pattern>/blood</url-pattern>
-	</servlet-mapping>
 	
-		<servlet>
-		<servlet-name>movieServlet</servlet-name>
-		<servlet-class>com.academy.model2app.movie.controller.MovieController</servlet-class>
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>com.academy.model2app.controller.DispatcherServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-	<servlet-name>movieServlet</servlet-name>
-	<url-pattern>/movie</url-pattern>
+		<servlet-name>dispatcher</servlet-name>
+		<!--어떤 파일명이든 .do로 들어오면 처리  -->
+		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
 </web-app>

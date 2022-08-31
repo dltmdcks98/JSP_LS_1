@@ -8,7 +8,7 @@
 <body>
 <%
 //세션에서 값 받아오기 
-	String msg = (String)session.getAttribute("data");
+	String msg = (String)request.getAttribute("data");
 %>
 당신이 선택한 혈액형에 대한 결과 판단
 <%=msg%>
