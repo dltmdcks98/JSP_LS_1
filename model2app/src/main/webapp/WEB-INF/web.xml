@@ -10,4 +10,13 @@
 	<servlet-name>bloodServlet</servlet-name>
 	<url-pattern>/blood</url-pattern>
 	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>movieServlet</servlet-name>
+		<servlet-class>com.academy.model2app.movie.controller.MovieController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>movieServlet</servlet-name>
+	<url-pattern>/movie</url-pattern>
+	</servlet-mapping>
 </web-app>
