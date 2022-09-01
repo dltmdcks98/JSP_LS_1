@@ -17,6 +17,6 @@ public class BloodController implements Controller {
 		
 	}
 	public String getViewPage() {
-		return"/blood/advice.jsp";
+		return"/blood/result";
 	}
 }

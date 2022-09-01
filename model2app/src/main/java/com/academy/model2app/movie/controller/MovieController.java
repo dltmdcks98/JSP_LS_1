@@ -26,6 +26,6 @@ public class MovieController implements Controller {
 	}
 	//DispatchServlet이 어떤 뷰 페이지를 보여줘야할지 결정
 	public String getViewPage() {
-		return"/movie/result.jsp";
+		return"/movie/result";
 	}
 }
