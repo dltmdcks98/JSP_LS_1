@@ -6,15 +6,12 @@ import java.io.IOException;
 import java.util.Properties;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.academy.model2app.blood.controller.BloodController;
-import com.academy.model2app.blood.model.BloodManager;
-import com.academy.model2app.movie.controller.MovieController;
-import com.academy.model2app.movie.model.MovieManager;
 
 /*
  * 모든 요청마다 1:1 대응하는 컨트롤러를 전면에 내세우면 오히려 유지 보수성이 떨어진다.
@@ -22,12 +19,16 @@ import com.academy.model2app.movie.model.MovieManager;
 public class DispatcherServlet extends HttpServlet{
 	FileInputStream fis;
 	Properties props;
-	
+
 	//생성자, init()으로 fis에 메모리에 올린다. doXX에 올리지 않는 이유는 요청이 올때마다 메모리에  File을 올리는건 낭비여서 서블릿이실행될때 처음만 실행되도록 하기 위해
+
 	@Override
-	public void init() throws ServletException {
+	public void init(ServletConfig config) throws ServletException {
 		try {
-			String path = "D:/OneDrive-LSC/SLAcademy/JSP_LS_1/model2app/src/main/webapp/WEB-INF/mapping.properties";
+			//자바 웹어플리케이션은 플랫폼에 독립적이어야 하므로, 자원의 주소는 class내에 하드코딩해서는 안된다.
+			ServletContext context=config.getServletContext();
+			String path = context.getRealPath("/WEB-INF/mapping.properties");
+			//String path = "D:/OneDrive-LSC/SLAcademy/JSP_LS_1/model2app/src/main/webapp/WEB-INF/mapping.properties"; 이런 하드코딩은 유지보수에 좋지 않다.
 			fis= new FileInputStream(path);
 			props = new Properties();
 			props.load(fis);
