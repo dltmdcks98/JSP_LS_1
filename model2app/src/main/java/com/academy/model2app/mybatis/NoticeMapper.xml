@@ -28,6 +28,18 @@
 		<include refid="selectCommon"/> 
 		where notice_id=#{notice_id}
 	</select>
+<!-- 한건 등록 id-insert #{Notice의 멤버변수}-->
+	<insert id="insert" parameterType="Notice">
+		insert into notice(notice_id, title, writer, content) 
+		values(seq_notice.nextval,#{title}, #{writer}, #{content})
+	</insert>
 
-
+<!-- 한건 수정 id-update -->
+	<update id="update" parameterType="Notice">
+		update notice set title=#{title}, writer=#{writer},content=#{content} where notice_id=#{notice_id}  
+	</update>
+<!-- 한건 삭제 id-delete -->
+	<delete id="delete" parameterType="int">
+		delete from notice where notice_id=#{notice_id}
+	</delete>
 </mapper>
