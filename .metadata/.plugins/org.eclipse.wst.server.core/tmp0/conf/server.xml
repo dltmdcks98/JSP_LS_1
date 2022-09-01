@@ -40,7 +40,13 @@
     
     <Resource auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" maxActive="20" maxIdle="10" maxWait="3000" name="jdbc/myoracle" password="1234" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:XE" username="java"/>
 		
-	<Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxActive="20" maxIdle="10" maxWait="3000" name="jdbc/mysql" password="1234" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/javastudy?characterEncoding=UTF-8" username="root"/>
+<!-- 	<Resource auth="Container" 
+	driverClassName="com.mysql.jdbc.Driver" 
+	maxActive="20" maxIdle="10" maxWait="3000" 
+	name="jdbc/mysql" password="1234" type="javax.sql.DataSource" 
+	url="jdbc:mysql://localhost:3306/javastudy?characterEncoding=UTF-8" username="root"/>
+ -->	
+	
   </GlobalNamingResources>
 
   <!-- A "Service" is a collection of one or more "Connectors" that share

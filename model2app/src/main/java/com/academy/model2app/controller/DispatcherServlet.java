@@ -47,7 +47,7 @@ public class DispatcherServlet extends HttpServlet{
 //			e.printStackTrace();
 //		}
 		
-		props =(Properties) config.getServletContext().getAttribute("props");
+		props =(Properties)config.getServletContext().getAttribute("props");
 	}
 	
 	//모든 요청을 이 서블릿이 받아야한다.
@@ -70,7 +70,7 @@ public class DispatcherServlet extends HttpServlet{
 		//String 경로를 이용하여 실제 클래스의 인스턴스를 생성하는 법 
 		try {
 			//()안에 있는 경로를 통해 static 영역으로 올린다. 원본만 올리는 것 아직 인스턴스가 올라오지 않음, new를 하지 않음 
-			Class controllerClass=Class.forName(controllerClassName);
+			Class controllerClass = Class.forName(controllerClassName);
 			controller =(Controller) controllerClass.newInstance();//new 연산자를 만드는 법, 구버젼
 			
 		} catch (ClassNotFoundException e) {

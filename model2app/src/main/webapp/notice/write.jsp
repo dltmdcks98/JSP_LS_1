@@ -15,12 +15,11 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript">
 	$(function(){
-		$("button"),click(function() {
+		$("button").click(function() {
 			//서버에 요청
 			$("form").attr({
 				method : "post",
-				action : "notice/regist.do",
-				
+				action : "/notice/regist.do",
 			});
 			$("form").submit();
 		});

@@ -17,11 +17,14 @@ public class MybatisConfigManager {
 	private static MybatisConfigManager instance;
 	SqlSessionFactory sqlSessionFactory;
 	InputStream inputStream;
+	
 	private MybatisConfigManager() {
-		String resource = "com/academy/model2app/mybatis/config.xml";
+		String resource = "com/academy/model2app/mybatis/config2.xml";
+		
 		try {
 			inputStream = Resources.getResourceAsStream(resource);
 			sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+			System.out.println(sqlSessionFactory);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
