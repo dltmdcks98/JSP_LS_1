@@ -12,4 +12,7 @@ public interface Controller {
 	//뷰페이지를 반환하는 메서드 getViewPage()
 	public String getViewName();
 	
+	//포워딩해야 하지 말지를 결정
+	public boolean isForward();
+	
 }

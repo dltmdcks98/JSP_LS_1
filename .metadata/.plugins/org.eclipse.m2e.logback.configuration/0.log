@@ -810,3 +810,117 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact oracle:oracle
 2022-09-01 17:38:29,363 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
 2022-09-01 17:38:29,364 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-09-01 17:38:29,364 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 17:39:41,466 [main] ERROR o.e.m.j.u.i.DownloadSourcesActionDelegate - Could not schedule source download
+org.eclipse.jdt.core.JavaModelException: target/classes/com/academy/model2app/mybatis [in model2app] is not on its project's build path
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:584) ~[na:na]
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254) ~[na:na]
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597) ~[na:na]
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328) ~[na:na]
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314) ~[na:na]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getKind(PackageFragmentRoot.java:530) ~[na:na]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceAttachmentPath(PackageFragmentRoot.java:655) ~[na:na]
+	at org.eclipse.m2e.jdt.ui.internal.DownloadSourcesActionDelegate.setActiveEditor(DownloadSourcesActionDelegate.java:53) ~[na:na]
+	at org.eclipse.ui.internal.EditorPluginAction.editorChanged(EditorPluginAction.java:69) ~[na:na]
+	at org.eclipse.ui.internal.EditorActionBuilder$EditorContribution.editorChanged(EditorActionBuilder.java:77) ~[na:na]
+	at org.eclipse.ui.internal.EditorActionBuilder$ExternalContributor.setActiveEditor(EditorActionBuilder.java:123) ~[na:na]
+	at org.eclipse.ui.internal.EditorActionBars.partChanged(EditorActionBars.java:338) ~[na:na]
+	at org.eclipse.ui.internal.WorkbenchPage.updateActivations(WorkbenchPage.java:323) ~[na:na]
+	at org.eclipse.ui.internal.WorkbenchPage$E4PartListener.partActivated(WorkbenchPage.java:212) ~[na:na]
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$2.run(PartServiceImpl.java:250) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.16.100.v20220315-2327.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.firePartActivated(PartServiceImpl.java:247) ~[na:na]
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:771) ~[na:na]
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:680) ~[na:na]
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:675) ~[na:na]
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3215) ~[na:na]
+	at org.eclipse.ui.internal.WorkbenchPage.lambda$9(WorkbenchPage.java:3097) ~[na:na]
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74) ~[org.eclipse.swt.win32.win32.x86_64_3.120.0.v20220530-1036.jar:na]
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3095) ~[na:na]
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3065) ~[na:na]
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3056) ~[na:na]
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:569) ~[na:na]
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:524) ~[na:na]
+	at org.eclipse.ui.actions.OpenFileAction.openFile(OpenFileAction.java:103) ~[na:na]
+	at org.eclipse.ui.actions.OpenSystemEditorAction.run(OpenSystemEditorAction.java:96) ~[na:na]
+	at org.eclipse.ui.views.navigator.OpenActionGroup.runDefaultAction(OpenActionGroup.java:134) ~[na:na]
+	at org.eclipse.ui.views.navigator.MainActionGroup.runDefaultAction(MainActionGroup.java:307) ~[na:na]
+	at org.eclipse.ui.views.navigator.ResourceNavigator.handleOpen(ResourceNavigator.java:772) ~[na:na]
+	at org.eclipse.ui.views.navigator.ResourceNavigator$2.open(ResourceNavigator.java:489) ~[na:na]
+	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:48) ~[na:na]
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:800) ~[org.eclipse.jface_3.26.0.v20220513-0449.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.16.100.v20220315-2327.jar:na]
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174) ~[org.eclipse.jface_3.26.0.v20220513-0449.jar:na]
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:797) ~[org.eclipse.jface_3.26.0.v20220513-0449.jar:na]
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1116) ~[org.eclipse.jface_3.26.0.v20220513-0449.jar:na]
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:296) ~[org.eclipse.jface_3.26.0.v20220513-0449.jar:na]
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:331) ~[org.eclipse.jface_3.26.0.v20220513-0449.jar:na]
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89) ~[org.eclipse.swt.win32.win32.x86_64_3.120.0.v20220530-1036.jar:na]
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251) ~[org.eclipse.swt.win32.win32.x86_64_3.120.0.v20220530-1036.jar:na]
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066) ~[org.eclipse.swt.win32.win32.x86_64_3.120.0.v20220530-1036.jar:na]
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4068) ~[org.eclipse.swt.win32.win32.x86_64_3.120.0.v20220530-1036.jar:na]
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3645) ~[org.eclipse.swt.win32.win32.x86_64_3.120.0.v20220530-1036.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155) ~[na:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338) ~[na:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046) ~[na:na]
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155) ~[na:na]
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644) ~[na:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338) ~[na:na]
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551) ~[na:na]
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156) ~[na:na]
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152) ~[na:na]
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203) ~[org.eclipse.equinox.app_1.6.100.v20211021-1418.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136) ~[org.eclipse.osgi_3.18.0.v20220516-2155.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104) ~[org.eclipse.osgi_3.18.0.v20220516-2155.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402) ~[org.eclipse.osgi_3.18.0.v20220516-2155.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255) ~[org.eclipse.osgi_3.18.0.v20220516-2155.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659) ~[org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar:na]
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596) ~[org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar:na]
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467) ~[org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar:na]
+2022-09-01 17:42:04,908 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:42:04,909 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 17:42:04,910 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:42:04,911 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 17:48:30,706 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:48:30,707 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 17:48:30,708 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:48:30,708 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 17:53:27,502 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:53:27,503 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 17:53:27,504 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:53:27,505 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 17:53:51,242 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:53:51,242 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 17:53:51,243 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:53:51,243 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 17:56:19,475 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:56:19,476 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 17:56:19,477 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:56:19,478 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 17:56:51,883 [Worker-22: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:56:51,884 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 17:56:51,885 [Worker-22: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:56:51,886 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 17:56:58,057 [Worker-22: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:56:58,059 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 17:56:58,060 [Worker-22: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:56:58,060 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 17:58:31,536 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:58:31,536 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 17:58:31,537 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:58:31,537 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 17:59:31,882 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:59:31,883 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 17:59:31,884 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 17:59:31,884 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 18:00:18,754 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 18:00:18,754 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 18:00:18,755 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 18:00:18,755 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 18:01:28,612 [Worker-22: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 18:01:28,612 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 18:01:28,613 [Worker-22: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 18:01:28,614 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources

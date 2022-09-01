@@ -21,4 +21,10 @@ public class ListController implements Controller {
 	public String getViewName() {
 		return "/notice/result/list";
 	}
+	
+	//JSP로 가져갈 것이 있으면 포워딩을 해야함 따라서 응답을 하지 말고, 서버의 jsp자원으로 
+	//포워딩을 시도하여 request를 살려둔다.
+	public boolean isForward() {
+		return true;
+	}
 }

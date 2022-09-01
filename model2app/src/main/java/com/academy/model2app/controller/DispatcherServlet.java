@@ -100,9 +100,15 @@ public class DispatcherServlet extends HttpServlet{
 		//포워딩 하기 전에 맵핑파일에서 검색을 해야함 실제 jsp파일 경로를 얻기 위해
 		String viewName = controller.getViewName();
 		String viewPage = props.getProperty(viewName);
-		
-		RequestDispatcher dis = request.getRequestDispatcher(viewPage);
-		dis.forward(request, response);
+		//무조건 foward로 하면 문제가 발생 글 작성을 하려면 Registcontroller 를 거쳐야 나옴
+		if(controller.isForward()) {
+			RequestDispatcher dis = request.getRequestDispatcher(viewPage);
+			dis.forward(request, response);
+		}else {
+			//리다이렉트(요청을 일단 끊고, 브라우저로 하여금 지정한 url로 다시 들어오게 한다.
+			response.sendRedirect(viewPage);
+			
+		}
 
 	}
 	

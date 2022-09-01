@@ -33,4 +33,11 @@ public class RegistController implements Controller{
 	public String getViewName() {
 		return "/notice/result/write";
 	}
+	
+	//JSP로 가져갈 것이 없으므로 데이터를 유지할 필요가 없음 
+	//따라서 request는 죽어도 되므로 응답을 하고, 응답을 하게되면 
+	//서버와 클라이언트는 연결이 끊기고 서버의 request, response thread는 소멸함
+	public boolean isForward() {
+		return false;
+	}
 }
