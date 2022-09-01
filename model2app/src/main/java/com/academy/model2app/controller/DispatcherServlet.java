@@ -100,6 +100,7 @@ public class DispatcherServlet extends HttpServlet{
 		//포워딩 하기 전에 맵핑파일에서 검색을 해야함 실제 jsp파일 경로를 얻기 위해
 		String viewName = controller.getViewName();
 		String viewPage = props.getProperty(viewName);
+		
 		RequestDispatcher dis = request.getRequestDispatcher(viewPage);
 		dis.forward(request, response);
 

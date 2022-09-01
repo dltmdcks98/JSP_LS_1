@@ -6,3 +6,5 @@ CREATE TABLE notice(
 	regdate DATE DEFAULT sysdate,
 	hit NUMBER DEFAULT 0
 );
+
+select notice_id, title, writer, content, regdate, hit from notice ORDER BY notice_id DESC;

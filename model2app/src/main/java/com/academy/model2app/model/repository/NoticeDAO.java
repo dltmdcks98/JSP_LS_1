@@ -1,5 +1,7 @@
 package com.academy.model2app.model.repository;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.academy.model2app.domain.Notice;
@@ -18,5 +20,13 @@ public class NoticeDAO {
 		sqlSession.commit();//myBatis는 자동 커밋이 안됨 
 		configManager.closeSqlSession(sqlSession);
 		return result;
+	}
+	
+	public List selectAll() {
+		List list = null;
+		SqlSession sqlSession = configManager.getSqlSession();
+		list = sqlSession.selectList("Notice.selectAll");
+		configManager.closeSqlSession(sqlSession);
+		return list;
 	}
 }

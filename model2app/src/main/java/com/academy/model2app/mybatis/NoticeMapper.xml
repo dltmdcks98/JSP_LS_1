@@ -15,12 +15,12 @@
 	</resultMap>
 	<!-- 공통 코드 조각 -->	
 	<sql id="selectCommon">
-		select notice_id, title, writer, content, regdate, hit from notice 
+		select notice_id, title, writer, content, regdate, hit from notice
 	</sql>
 	<!--뉴스 모두 기사 가져오기 -->
 	<select id="selectAll" resultMap="noticeMap">
 		<include refid="selectCommon"/>
-		order by notice_id desc
+		ORDER BY notice_id DESC
 	</select>
 
 	<!-- 한건 가져오기 -->

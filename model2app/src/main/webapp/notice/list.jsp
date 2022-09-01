@@ -1,4 +1,10 @@
+<%@page import="java.util.List"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
+<% 
+//포워딩으로 DispatcherServlet.ja 
+	List noticeList = (List)request.getAttribute("noticeList");
+	out.print(noticeList.size());
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
