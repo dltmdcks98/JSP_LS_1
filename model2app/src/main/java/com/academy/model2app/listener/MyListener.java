@@ -14,16 +14,20 @@ import javax.servlet.ServletContextListener;
  */
 public class MyListener implements ServletContextListener{
 	FileInputStream fis;
-	Properties props;
+	Properties props = new Properties();
 	
 	//웹 컨테이너가 가동 될때 호출되는 메서드
 	public void contextInitialized(ServletContextEvent sce) {
 		ServletContext context = sce.getServletContext();//jsp 에서의 application 내장객체의 자료형
 		String path = context.getInitParameter("contextConfigLocation");
-
+		context.setAttribute("props", props);//서버가 꺼질때 까지 계속 살아남
 		try {
-			fis = new FileInputStream(path);
+			fis = new FileInputStream(context.getRealPath(path));
+			props.load(fis);
 		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

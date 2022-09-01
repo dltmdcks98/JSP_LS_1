@@ -17,34 +17,37 @@ import javax.servlet.http.HttpServletResponse;
  * 모든 요청마다 1:1 대응하는 컨트롤러를 전면에 내세우면 오히려 유지 보수성이 떨어진다.
  */
 public class DispatcherServlet extends HttpServlet{
-	FileInputStream fis;
+//	FileInputStream fis;
+//	Properties props;
 	Properties props;
 
 	//생성자, init()으로 fis에 메모리에 올린다. doXX에 올리지 않는 이유는 요청이 올때마다 메모리에  File을 올리는건 낭비여서 서블릿이실행될때 처음만 실행되도록 하기 위해
 
 	@Override
 	public void init(ServletConfig config) throws ServletException {
-		try {
-			//자바 웹어플리케이션은 플랫폼에 독립적이어야 하므로, 자원의 주소는 class내에 하드코딩해서는 안된다.
-			ServletContext context=config.getServletContext();
-//			String path = context.getRealPath("/WEB-INF/mapping.properties");
-			
-			//path 안에 있는 변수를 XML 파일에 넣고 최초 요청을 받을 때 변수 값으로 받는다.
-			String param = config.getInitParameter("contextConfigLocation");
-			String path = context.getRealPath(param);
-			
-			//String path = "D:/OneDrive-LSC/SLAcademy/JSP_LS_1/model2app/src/main/webapp/WEB-INF/mapping.properties"; 이런 하드코딩은 유지보수에 좋지 않다.
-			fis= new FileInputStream(path);
-			props = new Properties();
-			props.load(fis);
-			
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			//자바 웹어플리케이션은 플랫폼에 독립적이어야 하므로, 자원의 주소는 class내에 하드코딩해서는 안된다.
+//			ServletContext context=config.getServletContext();
+////			String path = context.getRealPath("/WEB-INF/mapping.properties");
+//			
+//			//path 안에 있는 변수를 XML 파일에 넣고 최초 요청을 받을 때 변수 값으로 받는다.
+//			String param = config.getInitParameter("contextConfigLocation");
+//			String path = context.getRealPath(param);
+//			
+//			//String path = "D:/OneDrive-LSC/SLAcademy/JSP_LS_1/model2app/src/main/webapp/WEB-INF/mapping.properties"; 이런 하드코딩은 유지보수에 좋지 않다.
+//			fis= new FileInputStream(path);
+//			props = new Properties();
+//			props.load(fis);
+//			
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+		props =(Properties) config.getServletContext().getAttribute("props");
 	}
 	
 	//모든 요청을 이 서블릿이 받아야한다.
@@ -104,14 +107,14 @@ public class DispatcherServlet extends HttpServlet{
 	
 	//서블릿이 일을 다하고 소면될때, 호출되는 생명주기 메서드
 	public void destroy() {
-		if(fis!=null) {
-			try {
-				fis.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
+//		if(fis!=null) {
+//			try {
+//				fis.close();
+//			} catch (IOException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//		}
 	}
 	
 }
