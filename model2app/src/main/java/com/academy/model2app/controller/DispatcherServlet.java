@@ -27,7 +27,12 @@ public class DispatcherServlet extends HttpServlet{
 		try {
 			//자바 웹어플리케이션은 플랫폼에 독립적이어야 하므로, 자원의 주소는 class내에 하드코딩해서는 안된다.
 			ServletContext context=config.getServletContext();
-			String path = context.getRealPath("/WEB-INF/mapping.properties");
+//			String path = context.getRealPath("/WEB-INF/mapping.properties");
+			
+			//path 안에 있는 변수를 XML 파일에 넣고 최초 요청을 받을 때 변수 값으로 받는다.
+			String param = config.getInitParameter("contextConfigLocation");
+			String path = context.getRealPath(param);
+			
 			//String path = "D:/OneDrive-LSC/SLAcademy/JSP_LS_1/model2app/src/main/webapp/WEB-INF/mapping.properties"; 이런 하드코딩은 유지보수에 좋지 않다.
 			fis= new FileInputStream(path);
 			props = new Properties();
