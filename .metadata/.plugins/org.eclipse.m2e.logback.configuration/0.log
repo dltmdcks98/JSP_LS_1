@@ -289,3 +289,51 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact oracle:oracle
 2022-09-01 12:15:11,816 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
 2022-09-01 12:15:11,819 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-09-01 12:15:11,821 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 13:35:48,765 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:35:48,766 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 13:35:48,768 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:35:48,769 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 13:38:23,717 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:38:23,719 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 13:38:23,720 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:38:23,721 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 13:38:32,106 [Worker-16: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:38:32,107 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 13:38:32,109 [Worker-16: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:38:32,110 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 13:38:55,393 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:38:55,394 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 13:38:55,395 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:38:55,396 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 13:39:22,522 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:39:22,523 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 13:39:22,525 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:39:22,525 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 13:39:38,138 [Worker-16: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:39:38,139 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 13:39:38,140 [Worker-16: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:39:38,141 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 13:40:28,566 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:40:28,567 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 13:40:28,572 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:40:28,574 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 13:42:15,775 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:42:15,776 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 13:42:15,777 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:42:15,779 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 13:46:02,520 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:46:02,522 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 13:46:02,523 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:46:02,524 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 13:47:03,932 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:47:03,933 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 13:47:03,934 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:47:03,935 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 13:47:38,540 [Worker-16: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:47:38,541 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 13:47:38,543 [Worker-16: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:47:38,545 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
+2022-09-01 13:49:13,377 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:49:13,378 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\main\resources
+2022-09-01 13:49:13,379 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-09-01 13:49:13,380 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\OneDrive-LSC\SLAcademy\JSP_LS_1\model2app\src\test\resources
