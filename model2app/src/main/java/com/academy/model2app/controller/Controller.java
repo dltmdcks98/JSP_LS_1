@@ -10,6 +10,6 @@ public interface Controller {
 	//업무를 처리하는 메서드를 execute()
 	public void execute(HttpServletRequest request, HttpServletResponse response);
 	//뷰페이지를 반환하는 메서드 getViewPage()
-	public String getViewPage();
+	public String getViewName();
 	
 }

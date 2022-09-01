@@ -16,7 +16,7 @@ public class BloodController implements Controller {
 		request.setAttribute("data", msg);
 		
 	}
-	public String getViewPage() {
+	public String getViewName() {
 		return"/blood/result";
 	}
 }
