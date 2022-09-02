@@ -17,7 +17,7 @@
 	<sql id="selectCommon">
 		select notice_id, title, writer, content, regdate, hit from notice
 	</sql>
-	<!--뉴스 모두 기사 가져오기 -->
+	<!-- 모두 가져오기 -->
 	<select id="selectAll" resultMap="noticeMap">
 		<include refid="selectCommon"/>
 		ORDER BY notice_id DESC

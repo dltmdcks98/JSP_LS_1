@@ -29,4 +29,12 @@ public class NoticeDAO {
 		configManager.closeSqlSession(sqlSession);
 		return list;
 	}
+	//한건 가져오기 
+	public Notice select(int notice_id) {
+		Notice notice = null;
+		SqlSession sqlSession = configManager.getSqlSession();
+		notice = sqlSession.selectOne("Notice.select",notice_id);
+		configManager.closeSqlSession(sqlSession);
+		return notice;
+	}
 }
