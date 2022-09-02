@@ -23,7 +23,11 @@
 		//버튼이 2개 이므로 배열로 존재
 		$($("button")[0]).click(function(){
 			if(confirm("수정하시겠어요?")){
-				
+				$("form").attr({
+					action:"/notice/edit.do",
+					method:"post"
+				});
+				$("form").submit();
 			}
 		});
 		$($("button")[1]).click(function(){
@@ -43,6 +47,7 @@
 		<h2>상세보기</h2>
 		
 		<form class="was-validated">
+			<input type="hidden" name="notice_id" value="<%=notice.getNotice_id()%>">
 			<div class="form-group">
 				 <input type="text" class="form-control" value="<%=notice.getTitle() %>" name="title" required>
 			</div>
@@ -56,6 +61,7 @@
 			
 			<button type="button" class="btn btn-primary">수정</button>
 			<button type="button" class="btn btn-primary">삭제</button>
+			<button type="button" class="btn btn-primary" onClick="location.href='/notice/list.do'">목록</button>
 		</form>
 	</div>
 

@@ -31,7 +31,7 @@ public class NoticeDAO {
 	}
 	//한건 가져오기 
 	public Notice select(int notice_id) {
-		Notice notice = null;
+		Notice notice = null; 
 		SqlSession sqlSession = configManager.getSqlSession();
 		notice = sqlSession.selectOne("Notice.select",notice_id);
 		configManager.closeSqlSession(sqlSession);
@@ -47,6 +47,16 @@ public class NoticeDAO {
 		configManager.closeSqlSession(sqlSession);
 	
 
+		return result;
+	}
+	
+	//한건 수정
+	public int update(Notice notice) {
+		int result = 0;
+		SqlSession sqlSession = configManager.getSqlSession();
+		result=sqlSession.update("Notice.update", notice);
+		sqlSession.commit();
+		configManager.closeSqlSession(sqlSession);
 		return result;
 	}
 }
