@@ -1,9 +1,13 @@
+<%@page import="com.academy.model2app.domain.Notice"%>
+<%@page import="com.academy.model2app.util.Pager"%>
 <%@page import="java.util.List"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%! Pager pager = new Pager(); %>
 <% 
 //포워딩으로 DispatcherServlet.ja 
-	List noticeList = (List)request.getAttribute("noticeList");
+	List<Notice> noticeList = (List)request.getAttribute("noticeList");
 	out.print(noticeList.size());
+	pager.init(noticeList, request);//공식이 실행
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,21 +43,29 @@
 		<table class="table table-dark table-striped">
 			<thead>
 				<tr>
-					<th>No</th>
-					<th>제목</th>
-					<th>작성자</th>
-					<th>등록일</th>
-					<th>조회수</th>
+					<th width="5%">No</th>
+					<th width="65%">제목</th>
+					<th width="10%">작성자</th>
+					<th width="10%">등록일</th>
+					<th width="10%">조회수</th>
 				</tr>
 			</thead>
 			<tbody>
+			<%
+				int curPos = pager.getCurPos();
+				int num = pager.getNum();
+			%>
+			<%for(int i=1; i<=pager.getPageSize();i++){ %>
+			<%if(num<1)break; %>
+			<%Notice notice= noticeList.get(curPos++); %>
 				<tr>
-					<td>John</td>
-					<td>Doe</td>
-					<td>john@example.com</td>
-					<td>john@example.com</td>
-					<td>john@example.com</td>
+					<td><%=num-- %></td>
+					<td><%=notice.getTitle() %></td>
+					<td><%=notice.getWriter() %></td>
+					<td><%=notice.getRegdate().substring(0,10) %></td>
+					<td><%=notice.getHit() %></td>
 				</tr>
+			<%}%>
 				<tr>
 					<td colspan="5"><button>글작성</button></td>
 				</tr>
