@@ -20,14 +20,20 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript">
 	$(function(){
-		$("button").click(function() {
-			//서버에 요청
-			$("form").attr({
-				method : "post",
-				action : "/notice/regist.do",
-			});
-			$("form").submit();
+		//버튼이 2개 이므로 배열로 존재
+		$($("button")[0]).click(function(){
+			if(confirm("수정하시겠어요?")){
+				
+			}
 		});
+		$($("button")[1]).click(function(){
+			if(confirm("삭제하시겠어요?")){
+				$(location).attr({
+					href:"/notice/delete.do?notice_id=<%=notice.getNotice_id()%>"
+				});
+			}
+		});
+		
 	});	
 </script>
 </head>
@@ -38,16 +44,18 @@
 		
 		<form class="was-validated">
 			<div class="form-group">
-				 <input type="text" class="form-control" placeholder="제목 입력" name="title" required>
+				 <input type="text" class="form-control" value="<%=notice.getTitle() %>" name="title" required>
 			</div>
 			<div class="form-group">
-				 <input type="text" class="form-control" placeholder="작성자 입력" name="writer" required>
+				 <input type="text" class="form-control" value="<%=notice.getWriter() %>" name="writer" required>
+
 			</div>
 			<div class="form-group">
-				<textarea class="form-control" name = "content"></textarea>
+				<textarea class="form-control" name = "content"><%=notice.getContent() %></textarea>
 			</div>
 			
-			<button type="button" class="btn btn-primary">Submit</button>
+			<button type="button" class="btn btn-primary">수정</button>
+			<button type="button" class="btn btn-primary">삭제</button>
 		</form>
 	</div>
 

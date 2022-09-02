@@ -37,4 +37,16 @@ public class NoticeDAO {
 		configManager.closeSqlSession(sqlSession);
 		return notice;
 	}
+	
+	//한건 삭제하기
+	public int delete(int notice_id) {
+		int result = 0;
+		SqlSession sqlSession = configManager.getSqlSession();
+		result = sqlSession.delete("Notice.delete",notice_id);
+		sqlSession.commit();
+		configManager.closeSqlSession(sqlSession);
+	
+
+		return result;
+	}
 }
