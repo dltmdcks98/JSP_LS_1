@@ -1,6 +1,6 @@
 package com.academy.springbasicapp.cook;
 
-public class FriPan {
+public class FriPan implements Pan{
 
 	
 	public void boil() {

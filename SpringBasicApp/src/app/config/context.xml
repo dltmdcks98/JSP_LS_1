@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 어플리케이션에서 사용될 객체들은 여기에 명시한다. new 대신-->
+	<bean id="electPan" class="com.academy.springbasicapp.cook.ElectPan" />
+	<bean id="friPan" class="com.academy.springbasicapp.cook.FriPan" />
+	
+	<bean id = "chef" class="com.academy.springbasicapp.cook.Chef">
+	<!-- 특정 bean을 다른 bean에 주입시키는 것을 xml로 표현할때 weaving(엮다)한다 라고 한다.  -->
+		<property name="pan" ref="electPan"/>
+	</bean>
+	
+</beans>
