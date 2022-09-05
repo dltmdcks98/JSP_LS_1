@@ -3,6 +3,7 @@ package com.academy.springbasicapp.cook;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.academy.springbasicapp.gui.MyWin;
+import com.academy.springbasicapp.school.Student;
 
 public class AppMain {
 	public static void main(String[] args) {
@@ -21,10 +22,17 @@ public class AppMain {
 //		아래의 ApplicationContext를 객체를 메모리에 올릴때 지정한 xml을 파싱하고, 그 xml에 명시된 모든 bean들은 
 //		객체의 인스턴스가 만들어져 컨테이너에 의해 관리된다.
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("app/config/context.xml");
-		Chef chef = (Chef) context.getBean("chef");//새롭게 인스턴스를 생성하지 않고 이미 컨터이너가 생성된 빈을 얻어오기
-		chef.cook();
+//		Chef chef = (Chef) context.getBean("chef");//새롭게 인스턴스를 생성하지 않고 이미 컨터이너가 생성된 빈을 얻어오기
+//		chef.cook();
 		
-		MyWin myWin = (MyWin)context.getBean("myWin");
-		myWin.init();
+//		MyWin myWin = (MyWin)context.getBean("myWin");
+//		myWin.init();
+		
+		Student student = (Student)context.getBean("student");
+		student.studyTime1();
+		student.studyTime2();
+		student.studyTime3();
+		student.studyTime4();
+		student.studyTime5();
 	}
 }

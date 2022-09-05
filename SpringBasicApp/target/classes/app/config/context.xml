@@ -1,38 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
 
-<!-- 어플리케이션에서 사용될 객체들은 여기에 명시한다. new 대신-->
-	<bean id="electPan" class="com.academy.springbasicapp.cook.ElectPan" />
+	<!-- 어플리케이션에서 사용될 객체들은 여기에 명시한다. new 대신 -->
+	<bean id="electPan"
+		class="com.academy.springbasicapp.cook.ElectPan" />
 	<bean id="friPan" class="com.academy.springbasicapp.cook.FriPan" />
-	
-	<bean id = "chef" class="com.academy.springbasicapp.cook.Chef">
-	<!-- 특정 bean을 다른 bean에 주입시키는 것을 xml로 표현할때 weaving(엮다)한다 라고 한다.  -->
-		<property name="pan" ref="electPan"/>
+
+	<bean id="chef" class="com.academy.springbasicapp.cook.Chef">
+		<!-- 특정 bean을 다른 bean에 주입시키는 것을 xml로 표현할때 weaving(엮다)한다 라고 한다. -->
+		<property name="pan" ref="electPan" />
 	</bean>
-	
-	
+
+
 	<!-- 윈도우 창과 그 재료들을 엮어본다. -->
 	<bean id="jTextArea" class="javax.swing.JTextArea">
-	<!-- 생성자 표시 
-		<constructor-arg index="0" value="20"/>
-		<constructor-arg index="1" value="15"/>
-		-->
+		<!-- 생성자 표시 <constructor-arg index="0" value="20"/> <constructor-arg index="1" 
+			value="15"/> -->
 	</bean>
-	
+
 	<bean id="jTextField" class="javax.swing.JTextField">
 		<constructor-arg type="int" value="20" />
 	</bean>
-	
+
 	<bean id="jButton" class="javax.swing.JButton">
 		<constructor-arg type="String" value="나버튼" />
 	</bean>
-	
+
 	<!-- MyWin과 그 재료들을 weaving -->
 	<bean id="myWin" class="com.academy.springbasicapp.gui.MyWin">
 		<property name="area" ref="jTextArea" />
-		<property name="t_input" ref="jTextField"/>
-		<property name="bt" ref="jButton"/>
+		<property name="t_input" ref="jTextField" />
+		<property name="bt" ref="jButton" />
 	</bean>
+
+
+	<!--AOP -->
+	<!-- 공통로직 -->
+	<bean id="student" class="com.academy.springbasicapp.school.Student" />
+	
+	<bean id="schoolBell" class="com.academy.springbasicapp.school.SchoolBell" />
+	<!-- SchoolBell 등록 -->
+	<aop:config>
+		<aop:aspect ref="schoolBell">
+			<!-- 어느 지점에 공통로직을 적용할지 서술 -->
+			<!-- expression : 어떤 클래스에 적용할지 표현식을 적는 부분 => AspectJ 기술에서 적용 * : 모든 자료형 -->
+			<aop:pointcut
+				expression="execution(public * com.academy.springbasicapp.school.*.*(..))"
+				id="bellPointcut" />
+			<!-- 어느 시점에 공통로직을 적용할지 서술 -->
+			<aop:before method="sound" pointcut-ref="bellPointcut" />
+		</aop:aspect>
+	</aop:config>
 </beans>
