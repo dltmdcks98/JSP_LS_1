@@ -2,6 +2,8 @@ package com.academy.springbasicapp.cook;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.academy.springbasicapp.gui.MyWin;
+
 public class AppMain {
 	public static void main(String[] args) {
 //		Chef chef = new Chef();
@@ -21,5 +23,8 @@ public class AppMain {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("app/config/context.xml");
 		Chef chef = (Chef) context.getBean("chef");//새롭게 인스턴스를 생성하지 않고 이미 컨터이너가 생성된 빈을 얻어오기
 		chef.cook();
+		
+		MyWin myWin = (MyWin)context.getBean("myWin");
+		myWin.init();
 	}
 }

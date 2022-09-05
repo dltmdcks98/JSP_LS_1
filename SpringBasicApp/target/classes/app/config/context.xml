@@ -12,4 +12,27 @@
 		<property name="pan" ref="electPan"/>
 	</bean>
 	
+	
+	<!-- 윈도우 창과 그 재료들을 엮어본다. -->
+	<bean id="jTextArea" class="javax.swing.JTextArea">
+	<!-- 생성자 표시 
+		<constructor-arg index="0" value="20"/>
+		<constructor-arg index="1" value="15"/>
+		-->
+	</bean>
+	
+	<bean id="jTextField" class="javax.swing.JTextField">
+		<constructor-arg type="int" value="20" />
+	</bean>
+	
+	<bean id="jButton" class="javax.swing.JButton">
+		<constructor-arg type="String" value="나버튼" />
+	</bean>
+	
+	<!-- MyWin과 그 재료들을 weaving -->
+	<bean id="myWin" class="com.academy.springbasicapp.gui.MyWin">
+		<property name="area" ref="jTextArea" />
+		<property name="t_input" ref="jTextField"/>
+		<property name="bt" ref="jButton"/>
+	</bean>
 </beans>
